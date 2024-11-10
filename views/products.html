@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Products</h1>
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Category</th>
+                    <th>Colour</th>
+                    <!-- <th>Image</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Products}} <!-- Loop over the Products slice -->
+                    <tr>
+                        <td>{{.Name}}</td>
+                        <td>{{.Brand}}</td>
+                        <td>{{.Price}}</td>
+                        <td>{{.Stock}}</td>
+                        <td>{{.Category}}</td>
+                        <td>{{.Colour}}</td>
+                        <!-- <td><img src="{{.ImageURL}}" alt="{{.Name}}" class="product-image"></td> -->
+                    </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

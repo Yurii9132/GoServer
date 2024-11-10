@@ -1,0 +1,16 @@
+<!-- views/menu.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <ul>
+        {{range .}}
+            <li><strong>{{.Name}}</strong> - {{.Price}}</li>
+        {{end}}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
